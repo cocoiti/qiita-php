@@ -1,0 +1,42 @@
+{
+  "name": "qiita",
+  "apiVersion": "v2",
+  "baseUrl": "https://qiita.com",
+  "operations": {
+    "_abstract_list": {
+      "httpMethod": "GET",
+      "parameters": {
+         "page": {
+          "location": "query",
+          "type": "integer"
+        },
+        "per_page": {
+          "location": "query",
+          "type": "integer"
+        }
+      }
+    },
+    "item.list": {
+      "summary": "投稿の一覧を返します。",
+      "extends": "_abstract_list",
+      "uri": "/api/v2/items",
+      "parameters": {
+        "query": {
+          "location": "query",
+          "type": "string"
+        }
+      }
+    },
+    "item.get": {
+      "httpMethod": "GET",
+      "uri": "/api/v2/items/{id}",
+      "parameters": {
+        "id": {
+          "location": "uri",
+          "type": "string",
+          "required": true
+        }
+      }
+    }
+  }
+}
