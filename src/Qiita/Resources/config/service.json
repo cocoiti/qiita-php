@@ -37,6 +37,17 @@
           "required": true
         }
       }
+    },
+    "project.list": {
+      "summary": "チーム内に存在するプロジェクト一覧を返します。",
+      "extends": "_abstract_list",
+      "uri": "/api/v2/projects",
+      "parameters": {
+        "query": {
+          "location": "query",
+          "type": "string"
+        }
+      }
     }
   }
 }
